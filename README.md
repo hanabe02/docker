@@ -1,5 +1,4 @@
-# docker
-
+# docker ec2 가상 컴퓨터에서 실행하기
 	1. gradlew clean build
 	2. docker build -t kimminseongg/board:v1 .
 	3. docker push kimminseongg/board:v1
@@ -8,6 +7,7 @@
 	6. docker run kimminseogg/board:v1
 	7. docker run -d -p 8060:8060  kimminseongg/board:v1
 
+# docker 내 컴퓨터에서 실행하기
  	1. cmd 에서 실행하는 방법 
   	2. docker run -p 8060:8060 kimminseongg/board:v1 실행
    	3. http://localhost:8060/board/openBoardList.do
