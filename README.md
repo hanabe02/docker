@@ -16,3 +16,6 @@
 # docker 활용해서 다른 프로젝트 올려보기
 ex) react, vue, nexacro 등..
 백단 spring boot 사용
+
+# docker, 젠킨스, 쿠보네틱스, 컴포저, 주키퍼, 카프카
+공부해야할 내용
