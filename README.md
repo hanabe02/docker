@@ -19,3 +19,11 @@ ex) react, vue, nexacro 등..
 
 # docker, 젠킨스, 쿠보네틱스, 컴포저, 주키퍼, 카프카
 공부해야할 내용
+
+# 백엔드
+Spring boot 에서 rest API를 설계할 때 사용하는 구조 
+mvc 패턴 (model-view-controller) 구조
+ rest api 환경에서 view 대신 json 등으로 데이터를 반환
+
+## 일반적인 spring boot rest api 구조 
+
