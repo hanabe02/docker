@@ -22,6 +22,17 @@
 2. npm i express (심플한 팬들 생성)
 3. index.js 파일 생성
 4. dockerfile 생성 (어떤 이미지를 만들 건지/ 프로젝트에 어떤 것들이 필요한지를 명시 하는 곳)
+5. docker build -f Dockerfile -t fun-docker . (error 가 나는 경우 docker 데스크탑 실행 안해줘서 나는 오류)
+6. docker images (이미지 확인)
+7. docker run -d -p 8080:8080 fun-docker (d 는 디테치), (p는 포트번호)
+8. docker ps (실행중인 도커를 확인 할 수 있다)
+9. docker logs [숫자] (실행중인지 를 확인 할 수 있다.
+10. docker 데스크탑 사이트에서 레파지토리 생성 docker-example
+11. 만든 이미지의 이름을 변경
+12. docker login 진행
+13. docker push 를 통해 생성한 이미지를 내 레파지토리에 넣어주는 역할을 진행
+14. 도커 데스크탑 사이트에서 제대로 올라왔는지 확인 하면 끝
+
 # docker ec2 가상 컴퓨터에서 실행하기
 	1. gradlew clean build
 	2. docker build -t kimminseongg/board:v1 .
