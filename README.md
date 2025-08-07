@@ -1,13 +1,21 @@
 # Docker 를 사용해야 하는 이유
-1. 내 pc에서는 잘 돌아가던 파일이, server 에서는 돌아가지 않는 상황 방지
-2. 어플리케이션을 구동하기 위한 런타임 환경에 필요한 것들을 일일이 설치하지 않고 도커에 한번만 넣어주면 되서 편리하다.
-3. 또한 이것저것 설정하고 해결해야(디버깅) 하는 어려움을 해결할 수 있다.
+	1. 내 pc에서는 잘 돌아가던 파일이, server 에서는 돌아가지 않는 상황 방지
+	2. 어플리케이션을 구동하기 위한 런타임 환경에 필요한 것들을 일일이 설치하지 않고 도커에 한번만 넣어주면 되서 편리하다.
+	3. 또한 이것저것 설정하고 해결해야(디버깅) 하는 어려움을 해결할 수 있다.
 
 # docker 의 흐름
-1. local macine 에서 이미지 생성 push [Container Registry]
-2. container registry 에서 내가 생성한 이미지가 저장되어 있다면
-3. 다른 pc 또는 서버에서 [container registry] 이미지를 pull 하여 가져온다.
-4. 이때!  docker 와 같은 [컨테이너 엔진]을 설치해야한다.
+	1. local macine 에서 이미지 생성 push [Container Registry]
+	2. container registry 에서 내가 생성한 이미지가 저장되어 있다면
+	3. 다른 pc 또는 서버에서 [container registry] 이미지를 pull 하여 가져온다.
+	4. 이때!  docker 와 같은 [컨테이너 엔진]을 설치해야한다.
+
+# docker 설치해야하는 곳
+	1. 우리가 개발하고 있는 머신에 docker 설치
+ 	2. server 에도 docker 설치
+	3. 어플리케이션에서 구동하는데 필요한 docker 파일을 작성한 다음
+ 	4. 어플리케이션에서 스냅샷 할 수 있는 이미지를 생성 Build 를 통해 image 생성
+  	5. image 를 [container registry] 에 push 를 진행
+   	6. server 에서 다운 받아서 [pull] 컨테이너를 실행
 
 # docker ec2 가상 컴퓨터에서 실행하기
 	1. gradlew clean build
