@@ -17,6 +17,11 @@
   	5. image 를 [container registry] 에 push 를 진행
    	6. server 에서 다운 받아서 [pull] 컨테이너를 실행
 
+# docker 체험 명령어
+1. npm init -y (프로젝트 초기화)
+2. npm i express (심플한 팬들 생성)
+3. index.js 파일 생성
+4. dockerfile 생성 (어떤 이미지를 만들 건지/ 프로젝트에 어떤 것들이 필요한지를 명시 하는 곳)
 # docker ec2 가상 컴퓨터에서 실행하기
 	1. gradlew clean build
 	2. docker build -t kimminseongg/board:v1 .
