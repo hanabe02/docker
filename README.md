@@ -95,8 +95,6 @@ ex) react, vue, nexacro 등..
  AOP : 로깅, 트랜잭션, 보안 등의 횡단 관심사 분리
  JWT, OAuth2 : 인증/인가 처리 시 사용
 
-# 쿠보네틱스
-
 
 
 
