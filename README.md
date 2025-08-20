@@ -4,6 +4,8 @@
 	3. 또한 이것저것 설정하고 해결해야(디버깅) 하는 어려움을 해결할 수 있다.
     4. Docker 공부는 필수 
 
+ 시간 날 때 마다 공부 하기 도커
+
 # docker 의 흐름
 	1. local macine 에서 이미지 생성 push [Container Registry]
 	2. container registry 에서 내가 생성한 이미지가 저장되어 있다면
