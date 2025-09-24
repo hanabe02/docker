@@ -19,7 +19,7 @@
  	4. 어플리케이션에서 스냅샷 할 수 있는 이미지를 생성 Build 를 통해 image 생성
   	5. image 를 [container registry] 에 push 를 진행
    	6. server 에서 다운 받아서 [pull] 컨테이너를 실행
-
+ 
 # docker 체험 명령어
 1. npm init -y (프로젝트 초기화)
 2. npm i express (심플한 팬들 생성)
