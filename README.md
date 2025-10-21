@@ -1,9 +1,49 @@
 # 배포
-	모두 웹 서비스를 배포하는 방법이지만, 
-		1. 서버 관리 책임
-		2. 자동화 수준
-		3. 유연성 
+	"내 로컬에서만 실행되던 프로그램(웹/서버)를, 다른 사람들도 인터넷을 통해 접근 할 수 있게 만드는 과정"
 
+	즉, 내 컴퓨터 안에서만 돌아가던 Node.js 서버나 React 웹 페이지를 
+	인터넷 주소(https://000.com)로 누구나 접근 가능하게 만드는 걸 의미한다.
+
+	배포의 핵심 구성 3가지
+		1. 서버(server)
+			내 코드를 실행시켜줄 컴퓨터(가상 or 물리) 
+			aws ec2, vercel, render
+		2. 데이터베이스(DB) 
+			데이터(회원정보, 글, 로그 등)를 저장할 곳
+			aws rds, mongoDB Atlas, supabase
+		3. 도메인(domain)
+			사람들이 접속할 수 있는 주소(URL) 
+
+	배포의 일반적인 흐름
+		1. 코드를 서버에 올림
+			github > 배포 플랫폼(vercel, render, aws등) 으로 연결
+			또는 직접 zip 파일 업로드
+		2. 서버 실행 환경 세팅
+			node.js 설치, npm install
+			npm start 또는 pm2 start server.js
+		3. DB 연결
+			로컬 DB URL > 클라우드 DB URL 로 변경
+		4. 도메인 연결
+			기본 도멘인을 쓰거나, 직접 구매한 도메인 주소를 연결 가능
+
+	배포 형태의 3가지 단계
+		개발 환경(Local) 내 컴퓨터에서 테스트 http://localhost:3000
+		테스트/스테이징 배포 전 검증용 서버 내부 테스트용 URL (staging)
+		운영환경 실제 사용자가 접속
+
+	가상 서버
+		물리 서버가 아닌, 클라우드 상에 만들어진 내 전용 컴퓨터
+		코드 실행, 요청 처리, api 응답 담당
+		AWS EC2, Render, Railway, DigitalOcean Droplet, Google Compute Engine 등
+	가상 DB
+		물리 서버에 DB를 설치하지 않고, 클라우드에서 DB만 빌려 쓰는 서비스
+		AWS RDS, MongoDB Atlas, Supabase, PlanetScale, Neon 등
+
+# 배포 플랫폼 종류 (aws 말고)
+	프론트엔드 전용 Vercel, Netlify : react, next.js, vue 등 정적/ssr 페이지 배포에 특화
+	풀스택(백 + 프론트) render, railway, Fly.io : node.js 서버 + DB 함께 배포 가능
+	전문 클라우드 aws, gcp, Azure : 서버, DB, 로드, 밸런스, 보안 등 전부 직접 세팅 가능
+	
 # Ec2 + RDS
 	서버 관리 책임 : 직접 관리
 	자동화 수준 : 낮음
